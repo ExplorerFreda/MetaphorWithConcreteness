@@ -48,20 +48,36 @@ def compute_avg_concreteness(sentence, postag, prefix, concreteness, except_verb
 
 data = load_sentences('../../data/TroFi/TroFiTokenized.txt', data_type)
 conc_dict = load_conc_dict('../../data/duplication/concreteness_score_dup_pearson.txt')
-feature = dict()
-fout = open('../../data/duplication/feature.txt', 'w')
+original_words = ['absorb','assault','die','drag','drown','escape','examine','fill','fix','flow','grab',
+                  'grasp','kick','knock','lend','midd','pass','rest','ride','roll','smooth','step','stick',
+                  'strike','touch']
+fout = open('../../data/duplication/feature.arff', 'w')
+fout.write('@RELATION concreteness-data\n\n')
+fout.write('@ATTRIBUTE noun\tREAL\n')
+fout.write('@ATTRIBUTE prep\tREAL\n')
+fout.write('@ATTRIBUTE verb\tREAL\n')
+fout.write('@ATTRIBUTE adj\tREAL\n')
+fout.write('@ATTRIBUTE adv\tREAL\n')
+fout.write('@ATTRIBUTE class\t{L,N}\n\n')
+fout.write('@DATA\n')
+
+cnt = 0
 for word in data:
-    fout.write(word + '\n')
     for item in data[word]:
         sentence = item[2].split()
         postag = item[1].split()
+        cnt += 1
+        if item[3] == 'U':
+            continue
         conc_noun = compute_avg_concreteness(sentence, postag, 'NN', conc_dict)
         conc_prep = compute_avg_concreteness(sentence, postag, 'PRP', conc_dict)
         conc_verb = compute_avg_concreteness(sentence, postag, 'VB', conc_dict, word)
         conc_adj =  compute_avg_concreteness(sentence, postag, 'JJ', conc_dict)
         conc_adv =  compute_avg_concreteness(sentence, postag, 'RB', conc_dict)
         print conc_noun, conc_prep, conc_verb, conc_adj, conc_adv, item[3]
-        fout.write(str(conc_noun) + ' ' + str(conc_prep) + ' ' + str(conc_verb) + ' ' + str(conc_adj) + ' ' + str(conc_adv)
-                   + ' ' + item[3] + '\n')
-    fout.write('\n')
+        fout.write(str(conc_noun) + ',' + str(conc_prep) + ',' + str(conc_verb) + ',' + str(conc_adj) + ',' + str(conc_adv)
+                   + ',' + item[3] + '\n')
+fout.write('\n')
 fout.close()
+print cnt
+    # pause

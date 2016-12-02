@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1559c3ed-ea8a-4932-992c-40c6b0790c8e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generate_feature_for_sentences.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generate_feature_for_sentences.py" afterPath="$PROJECT_DIR$/generate_feature_for_sentences.py" />
     </list>
     <ignored path="modules.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +26,27 @@
       <file leaf-file-name="generate_feature_for_sentences.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/generate_feature_for_sentences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
               <folding>
                 <element signature="e#79#745#0" expanded="false" />
                 <element signature="e#780#1093#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generate_all_concreteness.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generate_all_concreteness.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="56" column="41" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="41" />
+              <folding>
+                <element signature="e#473#491#0" expanded="true" />
+                <element signature="e#536#1111#0" expanded="false" />
+                <element signature="e#1145#1674#0" expanded="false" />
+                <element signature="e#1704#1756#0" expanded="false" />
+                <element signature="e#1779#1831#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -434,6 +449,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="56" column="41" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="e#473#491#0" expanded="true" />
+            <element signature="e#536#1111#0" expanded="false" />
+            <element signature="e#1145#1674#0" expanded="false" />
+            <element signature="e#1704#1756#0" expanded="false" />
+            <element signature="e#1779#1831#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -591,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generate_all_concreteness.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="56" column="41" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/combine_matrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
@@ -619,10 +634,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/generate_all_concreteness.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="56" column="41" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="41" />
+          <folding>
+            <element signature="e#473#491#0" expanded="true" />
+            <element signature="e#536#1111#0" expanded="false" />
+            <element signature="e#1145#1674#0" expanded="false" />
+            <element signature="e#1704#1756#0" expanded="false" />
+            <element signature="e#1779#1831#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/generate_feature_for_sentences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="e#79#745#0" expanded="false" />
             <element signature="e#780#1093#0" expanded="false" />
