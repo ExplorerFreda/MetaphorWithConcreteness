@@ -1,0 +1,44 @@
+﻿//Script GUID:1a6e1849-361b-44da-ba28-8309d21b456f
+//Used for tracking history
+
+// The corpus file should be organized like: sentences, POSes
+#DECLARE corpus_filename string = @@corpus_filename@@;
+#DECLARE output_filename string = @@output_filename@@;
+#DECLARE stat_filename string = @@stat_filename@@;
+
+// Input the corpus
+#IF (@corpus_filename.EndsWith(".ss"))
+	Corpus = SSTREAM @corpus_filename;
+#ELSE
+    Corpus =
+        EXTRACT Sentence : string,
+                POSTags : string
+        FROM @corpus_filename
+        USING DefaultTextExtractor();
+#ENDIF
+
+// Extract word frequency
+WordFrequency =
+    PROCESS Corpus
+    USING PatternProcessor();
+WordFrequency =
+    SELECT Adjective, 
+		   Noun,
+           SUM(Count) AS Count
+    FROM WordFrequency
+    GROUP BY Adjective,
+             Noun;
+Stat =
+    SELECT COUNT( * ) AS Num_Different_Words
+    FROM WordFrequency;
+WordFrequency =
+    SELECT *
+    FROM WordFrequency
+    ORDER BY Adjective;
+	
+// Output
+OUTPUT WordFrequency
+TO @output_filename
+USING DefaultTextOutputter();
+OUTPUT Stat
+TO SSTREAM @stat_filename;
