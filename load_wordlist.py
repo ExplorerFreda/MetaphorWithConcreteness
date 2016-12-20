@@ -23,7 +23,7 @@ def load_wordlist(filename):
             continue
         cnt = int(cnt)
         ret.append((word_l, word_r, cnt))
-    ret = sorted(ret, key=lambda x:(x[0],-x[2]))
+    ret = sorted(ret, key=lambda x:(x[1],-x[2]))
     return ret
 
 
