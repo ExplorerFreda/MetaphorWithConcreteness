@@ -1,21 +1,8 @@
 import load_wordlist
 
-'''
-pairs
-room	furnace
-love	rose
-life	journey
-society	organism
-teacher	lamp
-elephant	wall
-idea	cell
-corruption	mudslide
-creativity	muscle
-death	mirror
-'''
 
-whole_wordlist_filename = '../data/adj+n_simp.tsv'
-pair_filename = '../data/pairs.tsv'
+whole_wordlist_filename = '../../data/Corpus/related_data/adj+n_simp.tsv'
+pair_filename = '../../data/Corpus/related_data/pair.tsv'
 
 
 def load_case_pair(filename):
@@ -40,7 +27,7 @@ for item in wordlist:
             noun_adj[item[1]] = []
         noun_adj[item[1]].append((item[0], item[2]))
 
-output_filename = '../data/case_study.tsv'
+output_filename = '../../data/Corpus/related_data/case_study.tsv'
 fout = open(output_filename, 'w')
 for item in pairs:
     for subitem in noun_adj[item[0]]:
