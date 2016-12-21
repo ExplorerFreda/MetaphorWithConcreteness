@@ -1,4 +1,5 @@
 from nltk.corpus import wordnet as wn
+import json
 
 def English(word):
     flag = False
