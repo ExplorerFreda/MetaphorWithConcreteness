@@ -1,0 +1,226 @@
+{
+  "VisualGraph": {
+    "Graph": {
+      "ModuleNodes": [
+        {
+          "Id": "8bb6b6af",
+          "ModuleId": "41e31e0d-49b2-438e-81ea-f52230fad083",
+          "CloudPriority": 0,
+          "DefaultDataRetentionHint": null,
+          "ModuleParameters": [
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "int_literal_flag",
+              "Value": "1"
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "str_pattern",
+              "Value": "@\"\\b(are|were|have been|is|was|has been|be|being)?\\b\""
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "vc",
+              "Value": "cosmos08/MSR.BigData"
+            }
+          ],
+          "ComplianceCluster": null,
+          "AcceptableMachineClusters": [],
+          "CustomDataLocationId": null
+        },
+        {
+          "Id": "14e5f318",
+          "ModuleId": "a3f56aa9-ca0f-426f-8cc0-fd95cc93bb00",
+          "CloudPriority": 0,
+          "DefaultDataRetentionHint": null,
+          "ModuleParameters": [
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "path",
+              "Value": "/users/v-haoysh/BNC/sents.tsv"
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "vc",
+              "Value": "vc://cosmos08/MSR.BigData"
+            }
+          ],
+          "ComplianceCluster": null,
+          "AcceptableMachineClusters": [],
+          "CustomDataLocationId": null
+        },
+        {
+          "Id": "96765130",
+          "ModuleId": "ed2e9867-db21-4740-9bd6-1f049b6c9934",
+          "CloudPriority": 0,
+          "DefaultDataRetentionHint": null,
+          "ModuleParameters": [
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "str_model_folder",
+              "Value": "\"/users/v-zw/ModelsFull/\""
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "str_min_num_of_token",
+              "Value": "\"5\""
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "str_max_num_of_token",
+              "Value": "\"60\""
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "vc",
+              "Value": "cosmos08/MSR.BigData"
+            }
+          ],
+          "ComplianceCluster": null,
+          "AcceptableMachineClusters": [],
+          "CustomDataLocationId": null
+        },
+        {
+          "Id": "16b2df33",
+          "ModuleId": "a0526e1d-b290-4277-9fd1-7b19b7f1e520",
+          "CloudPriority": 0,
+          "DefaultDataRetentionHint": null,
+          "ModuleParameters": [
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "str_model_folder",
+              "Value": "\"/users/v-zw/ModelsFull/\""
+            },
+            {
+              "ValueType": 0,
+              "AssignmentsToConcatenate": null,
+              "Name": "vc",
+              "Value": "cosmos08/MSR.BigData"
+            }
+          ],
+          "ComplianceCluster": null,
+          "AcceptableMachineClusters": [],
+          "CustomDataLocationId": null
+        }
+      ],
+      "DatasetNodes": [],
+      "SubGraphNodes": [],
+      "Edges": [
+        {
+          "SourceOutputPort": {
+            "NodeId": "96765130",
+            "PortName": "SO_Output_Path",
+            "GraphPortName": null,
+            "IsParameter": false
+          },
+          "DestinationInputPort": {
+            "NodeId": "8bb6b6af",
+            "PortName": "SI_Courpus_Path",
+            "GraphPortName": null,
+            "IsParameter": false
+          }
+        },
+        {
+          "SourceOutputPort": {
+            "NodeId": "14e5f318",
+            "PortName": "output",
+            "GraphPortName": null,
+            "IsParameter": false
+          },
+          "DestinationInputPort": {
+            "NodeId": "96765130",
+            "PortName": "SI_Corpus_Path",
+            "GraphPortName": null,
+            "IsParameter": false
+          }
+        },
+        {
+          "SourceOutputPort": {
+            "NodeId": "8bb6b6af",
+            "PortName": "SO_Output_Path",
+            "GraphPortName": null,
+            "IsParameter": false
+          },
+          "DestinationInputPort": {
+            "NodeId": "16b2df33",
+            "PortName": "SI_Corpus_Path",
+            "GraphPortName": null,
+            "IsParameter": false
+          }
+        }
+      ],
+      "Id": null,
+      "WorkspaceId": null,
+      "Etag": null,
+      "Tags": null,
+      "CreatedDate": "1970-01-01T00:00:00",
+      "LastModifiedDate": "1970-01-01T00:00:00",
+      "EntityStatus": 0
+    },
+    "Layout": {
+      "NodeLayouts": {
+        "8bb6b6af": {
+          "X": 454.5,
+          "Y": 291.54,
+          "Width": 200.0,
+          "Height": 60.0
+        },
+        "14e5f318": {
+          "X": 471.5,
+          "Y": 0.0,
+          "Width": 200.0,
+          "Height": 72.0
+        },
+        "96765130": {
+          "X": 455.5,
+          "Y": 163.54,
+          "Width": 200.0,
+          "Height": 60.0
+        },
+        "16b2df33": {
+          "X": 458.5,
+          "Y": 436.54,
+          "Width": 200.0,
+          "Height": 60.0
+        }
+      },
+      "CommentThreads": {},
+      "Id": null,
+      "WorkspaceId": null,
+      "Etag": null,
+      "Tags": null,
+      "CreatedDate": "1970-01-01T00:00:00",
+      "LastModifiedDate": "1970-01-01T00:00:00",
+      "EntityStatus": 0
+    },
+    "Aliases": {
+      "AliasedValues": null,
+      "NodeAliases": {},
+      "Id": null,
+      "WorkspaceId": null,
+      "Etag": null,
+      "Tags": null,
+      "CreatedDate": "2016-12-29T16:55:58.6844623+08:00",
+      "LastModifiedDate": "2016-12-29T16:55:58.6844623+08:00",
+      "EntityStatus": 0
+    }
+  },
+  "Interface": {
+    "Parameters": [],
+    "Ports": {
+      "Inputs": [],
+      "Outputs": []
+    },
+    "ParameterNamesByGroups": []
+  }
+}

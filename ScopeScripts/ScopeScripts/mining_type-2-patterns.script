@@ -4,7 +4,6 @@
 // The corpus file should be organized like: sentences, POSes
 #DECLARE corpus_filename string = @@corpus_filename@@;
 #DECLARE output_filename string = @@output_filename@@;
-#DECLARE stat_filename string = @@stat_filename@@;
 
 // Input the corpus
 #IF (@corpus_filename.EndsWith(".ss"))
@@ -17,28 +16,9 @@
         USING DefaultTextExtractor();
 #ENDIF
 
-// Extract word frequency
-WordFrequency =
+Sentences =
     PROCESS Corpus
-    USING PatternProcessor();
-WordFrequency =
-    SELECT Adjective, 
-		   Noun,
-           SUM(Count) AS Count
-    FROM WordFrequency
-    GROUP BY Adjective,
-             Noun;
-Stat =
-    SELECT COUNT( * ) AS Num_Different_Words
-    FROM WordFrequency;
-WordFrequency =
-    SELECT *
-    FROM WordFrequency
-    ORDER BY Adjective;
-	
-// Output
-OUTPUT WordFrequency
+    USING DebugPatternProcessor;
+OUTPUT Sentences
 TO @output_filename
 USING DefaultTextOutputter();
-OUTPUT Stat
-TO SSTREAM @stat_filename;

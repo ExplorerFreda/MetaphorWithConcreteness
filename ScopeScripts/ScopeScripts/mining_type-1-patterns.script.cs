@@ -7,9 +7,7 @@ using ScopeRuntime;
 
 using Newtonsoft.Json;
 
-using StringNormalization;
-
-public class PatternProcessor : Processor
+public class PatternProcessor : Processor // This is the processor only mine adj.+n. pattern
 {
 	public override Schema Produces(string[] requestedColumns, string[] args, Schema input)
 	{
