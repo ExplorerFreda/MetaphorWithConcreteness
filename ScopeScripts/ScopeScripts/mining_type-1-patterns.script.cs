@@ -9,6 +9,17 @@ using Newtonsoft.Json;
 
 public class PatternProcessor : Processor // This is the processor only mine adj.+n. pattern
 {
+	private bool English(string word)
+	{
+		foreach (char ch in word)
+		{
+			if (ch < 'a' || ch > 'z')
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 	public override Schema Produces(string[] requestedColumns, string[] args, Schema input)
 	{
 		Schema output = new Schema();
@@ -42,6 +53,10 @@ public class PatternProcessor : Processor // This is the processor only mine adj
 				}
 				if (poses[i + 1].StartsWith("NN") && poses[i].StartsWith("JJ"))
 				{
+					if (!English(prev_word) || !English(succ_word))
+					{
+						continue;
+					}
 					outputRow["Adjective"].Set(prev_word);
 					outputRow["Noun"].Set(succ_word);
 					outputRow["Count"].Set(1);

@@ -14,6 +14,17 @@ using StringNormalization;
 
 public class PatternProcessor : Processor // This is the processor only mine n.+be+adj. pattern
 {
+	private bool English(string word)
+	{
+		foreach (char ch in word)
+		{
+			if (ch < 'a' || ch > 'z')
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 	public override Schema Produces(string[] requestedColumns, string[] args, Schema input)
 	{
 		Schema output = new Schema();
@@ -48,6 +59,10 @@ public class PatternProcessor : Processor // This is the processor only mine n.+
 					var m = rg.Match(mid_word);
 					if (m.Success)
 					{
+						if (!English(succ_word) || !English(prev_word))
+						{
+							continue;
+						}
 						outputRow["Adjective"].Set(succ_word);
 						outputRow["Noun"].Set(prev_word);
 						outputRow["Count"].Set(1);				
@@ -60,10 +75,21 @@ public class PatternProcessor : Processor // This is the processor only mine n.+
 }
 
 public class DebugPatternProcessor : Processor 
-{ 
+{
+	private bool English(string word)
+	{
+		foreach (char ch in word)
+		{
+			if (ch < 'a' || ch > 'z')
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 	public override Schema Produces(string[] requestedColumns, string[] args, Schema input)
 	{
-		Schema output = input.CloneWithSource();
+		Schema output = new Schema();
 		output.Add(new ColumnInfo("Adjective", ColumnDataType.String));
 		output.Add(new ColumnInfo("Noun", ColumnDataType.String));
 		output.Add(new ColumnInfo("Count", ColumnDataType.Integer));
@@ -95,7 +121,10 @@ public class DebugPatternProcessor : Processor
 					var m = rg.Match(mid_word);
 					if (m.Success)
 					{
-						row.CopyTo(outputRow);
+						if (!English(succ_word) || !English(prev_word))
+						{
+							continue;
+						}
 						outputRow["Adjective"].Set(succ_word);
 						outputRow["Noun"].Set(prev_word);
 						outputRow["Count"].Set(1); 

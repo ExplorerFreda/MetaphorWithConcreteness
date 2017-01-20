@@ -16,9 +16,19 @@
         USING DefaultTextExtractor();
 #ENDIF
 
-Sentences =
+Pairs =
     PROCESS Corpus
-    USING DebugPatternProcessor;
-OUTPUT Sentences
+    USING PatternProcessor;
+Pairs =
+    SELECT Adjective,
+           Noun,
+           SUM(Count) AS Count
+    FROM Pairs
+    GROUP BY Adjective,
+             Noun
+    ORDER BY Noun ASC,
+             Count DESC;
+
+OUTPUT Pairs
 TO @output_filename
 USING DefaultTextOutputter();

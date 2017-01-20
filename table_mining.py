@@ -107,34 +107,35 @@ def extract_conceptnet(conceptnet, adj, noun):
     return ret
 
 
-pairs1 = load_pairs(type1_pair_filename)
-pairs2 = load_pairs(type2_pair_filename)
-pairs = combine_pair_info(pairs1, pairs2)
-nouns = generate_noun_list(pairs)
-adjs = generate_adjective_list(nouns, pairs)
-dictionary = load_dictionary(dictionary_filenme)
-conceptnet = load_conceptnet(concept_net_filename)
+if __name__ == "__main__":
+    pairs1 = load_pairs(type1_pair_filename)
+    pairs2 = load_pairs(type2_pair_filename)
+    pairs = combine_pair_info(pairs1, pairs2)
+    nouns = generate_noun_list(pairs)
+    adjs = generate_adjective_list(nouns, pairs)
+    dictionary = load_dictionary(dictionary_filenme)
+    conceptnet = load_conceptnet(concept_net_filename)
 
 
-fout = open(output_filename, 'w')
-for item in nouns:
-    fout.write('\t\t\t' + item[0])
-fout.write('\n')
-for item in nouns:
-    fout.write('\t\t\t' + str(item[1]))
-fout.write('\n')
-for item in nouns:
-    fout.write('\tDictionary\tConceptNet\tCorpus')
-fout.write('\n')
-for idx, adj in enumerate(adjs):
-    print idx, adj
-    fout.write(adj)
+    fout = open(output_filename, 'w')
     for item in nouns:
-        fout.write('\t'+str(extract_dictionary(dictionary, adj, item[0]))+'\t'+str(extract_conceptnet(conceptnet, adj, item[0]))+'\t')
-        if (adj,item[0]) in pairs:
-            collcation_number = pairs[(adj,item[0])]
-        else:
-            collcation_number = 0
-        fout.write(str(collcation_number))
+        fout.write('\t\t\t' + item[0])
     fout.write('\n')
-fout.close()
+    for item in nouns:
+        fout.write('\t\t\t' + str(item[1]))
+    fout.write('\n')
+    for item in nouns:
+        fout.write('\tDictionary\tConceptNet\tCorpus')
+    fout.write('\n')
+    for idx, adj in enumerate(adjs):
+        print idx, adj
+        fout.write(adj)
+        for item in nouns:
+            fout.write('\t'+str(extract_dictionary(dictionary, adj, item[0]))+'\t'+str(extract_conceptnet(conceptnet, adj, item[0]))+'\t')
+            if (adj,item[0]) in pairs:
+                collcation_number = pairs[(adj,item[0])]
+            else:
+                collcation_number = 0
+            fout.write(str(collcation_number))
+        fout.write('\n')
+    fout.close()
