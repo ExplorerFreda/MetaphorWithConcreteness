@@ -10,7 +10,7 @@ import json
 
 
 input_filename = '../../data/bnc/sentences_withpostag.tsv'
-tag_prefix = 'JJ'
+tag_prefix = 'NN'
 output_filename = input_filename[:input_filename.rfind('/')+1]+tag_prefix+'.txt'
 fout = open(output_filename,'w')
 
