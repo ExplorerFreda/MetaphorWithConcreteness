@@ -1,0 +1,34 @@
+\begin{thebibliography}{}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{ano()}]{ano}
+ ????
+\newblock ano.
+
+\bibitem[{Boisson et~al.(2013)Boisson, Kao, Wu, Yen, and
+  Chang}]{boisson2013linggle}
+Joanne Boisson, Ting-Hui Kao, Jian-Cheng Wu, Tzu-Hsi Yen, and Jason~S Chang.
+  2013.
+\newblock Linggle: a web-scale linguistic search engine for words in context.
+\newblock In {\em ACL (Conference System Demonstrations)\/}. pages 139--144.
+
+\bibitem[{Bouma(2009)}]{bouma2009normalized}
+Gerlof Bouma. 2009.
+\newblock Normalized (pointwise) mutual information in collocation extraction.
+\newblock In {\em Proceedings of the Biennial GSCL Conference\/}. volume 156.
+
+\bibitem[{Church and Hanks(1990)}]{church1990word}
+Kenneth~Ward Church and Patrick Hanks. 1990.
+\newblock Word association norms, mutual information, and lexicography.
+\newblock {\em Computational linguistics\/} 16(1):22--29.
+
+\bibitem[{Turney et~al.(2011)Turney, Neuman, Assaf, and
+  Cohen}]{turney2011literal}
+Peter~D Turney, Yair Neuman, Dan Assaf, and Yohai Cohen. 2011.
+\newblock Literal and metaphorical sense identification through concrete and
+  abstract context.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing\/}. Association for Computational Linguistics, pages
+  680--690.
+
+\end{thebibliography}

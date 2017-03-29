@@ -35,10 +35,11 @@ def load_concreteness(filename):
         ret[word] = conc
     return ret
 
-
+'''
 wordlist = load_wordlist('../../data/Corpus/related_data/adj+n.tsv')
 print len(wordlist)
 fout = open('../../data/Corpus/related_data/adj+n_simp.tsv', 'w')
 for triple in wordlist:
     fout.write(triple[0] + '\t' + triple[1] + '\t' + str(triple[2]) +'\n')
 fout.close()
+'''
