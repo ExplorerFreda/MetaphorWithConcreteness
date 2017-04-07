@@ -1,8 +1,49 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: emnlp2017.aux
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: emnlp2017.aux
 The style file: emnlp_natbib.bst
 Database file #1: emnlp2017.bib
-Warning--to sort, need author or key in ano
-Warning--empty author in ano
-Warning--empty year in ano; set to ????
-Warning--empty booktitle in ano
-(There were 4 warnings)
+Warning--empty year in bulatmodelling; set to ????
+Warning--empty journal in bulatmodelling
+You've used 8 entries,
+            2936 wiz_defined-function locations,
+            640 strings with 6057 characters,
+and the built_in function-call counts, 5561 in all, are:
+= -- 438
+> -- 246
+< -- 8
++ -- 80
+- -- 72
+* -- 371
+:= -- 805
+add.period$ -- 36
+call.type$ -- 8
+change.case$ -- 74
+chr.to.int$ -- 8
+cite$ -- 10
+duplicate$ -- 457
+empty$ -- 443
+format.name$ -- 98
+if$ -- 1151
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 91
+newline$ -- 43
+num.names$ -- 32
+pop$ -- 213
+preamble$ -- 1
+purify$ -- 56
+quote$ -- 0
+skip$ -- 167
+stack$ -- 0
+substring$ -- 214
+swap$ -- 217
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 72
+warning$ -- 2
+while$ -- 37
+width$ -- 0
+write$ -- 105
+(There were 2 warnings)

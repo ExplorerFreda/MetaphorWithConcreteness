@@ -1,10 +1,6 @@
 \begin{thebibliography}{}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
-\bibitem[{ano()}]{ano}
- ????
-\newblock ano.
-
 \bibitem[{Boisson et~al.(2013)Boisson, Kao, Wu, Yen, and
   Chang}]{boisson2013linggle}
 Joanne Boisson, Ting-Hui Kao, Jian-Cheng Wu, Tzu-Hsi Yen, and Jason~S Chang.
@@ -17,10 +13,26 @@ Gerlof Bouma. 2009.
 \newblock Normalized (pointwise) mutual information in collocation extraction.
 \newblock In {\em Proceedings of the Biennial GSCL Conference\/}. volume 156.
 
+\bibitem[{Bulat et~al.()Bulat, Clark, and Shutova}]{bulatmodelling}
+Luana Bulat, Stephen Clark, and Ekaterina Shutova. ????
+\newblock Modelling metaphor with attribute-based semantics .
+
 \bibitem[{Church and Hanks(1990)}]{church1990word}
 Kenneth~Ward Church and Patrick Hanks. 1990.
 \newblock Word association norms, mutual information, and lexicography.
 \newblock {\em Computational linguistics\/} 16(1):22--29.
+
+\bibitem[{Li et~al.(2015)Li, Bai, Yin, and Xu}]{li2015chinese}
+Bin Li, Xiaopeng Bai, Siqi Yin, and Jie Xu. 2015.
+\newblock Chinese cogbank: Where to see the cognitive features of chinese
+  words.
+\newblock In {\em Proceedings of the Third Workshop on Metaphor in NLP\/}.
+  pages 77--86.
+
+\bibitem[{Roncero et~al.(2006)Roncero, Kennedy, and Smyth}]{roncero2006similes}
+Carlos Roncero, John~M Kennedy, and Ron Smyth. 2006.
+\newblock Similes on the internet have explanations.
+\newblock {\em Psychonomic Bulletin \& Review\/} 13(1):74--77.
 
 \bibitem[{Turney et~al.(2011)Turney, Neuman, Assaf, and
   Cohen}]{turney2011literal}
@@ -30,5 +42,11 @@ Peter~D Turney, Yair Neuman, Dan Assaf, and Yohai Cohen. 2011.
 \newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
   Language Processing\/}. Association for Computational Linguistics, pages
   680--690.
+
+\bibitem[{Veale and Hao(2007)}]{veale2007learning}
+Tony Veale and Yanfen Hao. 2007.
+\newblock Learning to understand figurative language: from similes to metaphors
+  to irony.
+\newblock In {\em Proceedings of the Cognitive Science Society\/}. volume~29.
 
 \end{thebibliography}
